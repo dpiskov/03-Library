@@ -22,11 +22,11 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-    - name: Install Packages
-      run: npm ci
-    - name: Run the Front End
-      run: npm run start-fe
-    - name: Run the Back End
-      run: npm run start-be
-    - name: Run Tests
+    - name: Install NPM Modules
+      run: npm install
+    - name: Start Front-End
+      run: npm run start-fe &
+    - name: Start Back-End
+      run: npm run start-be &
+    - name: Execute UI Tests
       run: npm run test-ui
