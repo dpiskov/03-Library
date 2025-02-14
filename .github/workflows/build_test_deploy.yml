@@ -24,6 +24,8 @@ jobs:
         cache: 'npm'
     - name: Install NPM Modules
       run: npm install
+    - name: Replace the BackEnd endpoint
+      run: echo "export const settings = {host:\"http://localhost:3030\"}" > src/config.js
     - name: Start Front-End
       run: npm run start-fe &
     - name: Start Back-End

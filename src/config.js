@@ -1,0 +1,1 @@
+export const settings = {host: "https://zero3-library-imd0.onrender.com"};
